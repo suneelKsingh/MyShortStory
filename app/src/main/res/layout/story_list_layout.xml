@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/storyCard"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="@dimen/card_radius"
+        android:layout_marginBottom="@dimen/card_radius"
+        app:cardCornerRadius="@dimen/card_radius"
+        app:cardElevation="@dimen/card_radius"
+        app:cardBackgroundColor="@color/my_black"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardImage"
+                android:layout_width="@dimen/width_60"
+                android:layout_height="@dimen/width_60"
+                android:layout_marginLeft="@dimen/top_margin_12"
+                app:cardCornerRadius="@dimen/height_30"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/storyImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/naruto"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_gravity="center"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/cardStoryTitle"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/subtitle_margin_82"
+                android:paddingLeft="@dimen/left_right_8"
+                android:text="@string/story_title"
+                android:layout_marginTop="@dimen/top_margin_12"
+                app:layout_constraintLeft_toRightOf="@+id/cardImage"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="@dimen/margin_40"
+                android:textColor="@color/black"
+
+                />
+
+            <TextView
+                android:id="@+id/cardStoryDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/subtitle_margin_82"
+                android:layout_marginTop="@dimen/left_right_8"
+                android:layout_marginRight="@dimen/height_30"
+                android:ellipsize="end"
+                android:lines="2"
+                android:paddingLeft="@dimen/left_right_8"
+                android:text="this is my first story ... hello world"
+                app:layout_constraintLeft_toRightOf="@+id/cardImage"
+                app:layout_constraintTop_toBottomOf="@+id/cardStoryTitle"
+                android:textColor="@color/black"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/menuButton"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/left_right_8"
+                android:src="@drawable/three_dot"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

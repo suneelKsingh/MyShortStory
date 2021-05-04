@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_40">30dp</dimen>
+    <dimen name="left_right_8">8dp</dimen>
+    <dimen name="top_margin_12">12dp</dimen>
+    <dimen name="card_radius">6dp</dimen>
+    <dimen name="width_60">60dp</dimen>
+    <dimen name="height_30">30dp</dimen>
+    <dimen name="subtitle_margin_82">84dp</dimen>
+    <dimen name="top_margin_60">60dp</dimen>
+</resources>

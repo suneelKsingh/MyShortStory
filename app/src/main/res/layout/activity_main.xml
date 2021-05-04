@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    android:background="@drawable/bg_background">
+
+    <include layout="@layout/toolbar_layout"
+        android:id="@+id/toolbar"/>
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerViewList"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginLeft="@dimen/left_right_8"
+        android:layout_marginRight="@dimen/left_right_8"
+        android:layout_marginBottom="@dimen/top_margin_12"
+        app:layout_constraintTop_toBottomOf="@+id/actionBar"
+        android:layout_marginTop="?attr/actionBarSize"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addNewStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:fabSize="normal"
+        android:src="@drawable/add_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="@dimen/margin_40"
+        android:layout_marginBottom="@dimen/margin_40"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
